@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>backbone.js example</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+<body>
+    <script type="text/template" id="test-template">
+        <ul>
+        <% _.each(personList, function (person) { %>
+            <li><%= person.name %> (<%= person.country %>)</li>
+        <% }); %>
+        </ul>
+    </script>
+
+    <div id="app">
+        <div id="list"></div>
+
+        <input type="text" id="name" placeholder="이름" />
+        <input type="text" id="country" placeholder="국가" />
+        <button id="insert">추가</button>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
